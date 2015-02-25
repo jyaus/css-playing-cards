@@ -32,7 +32,7 @@
 @icon-q:        "\265B  ";
 @icon-j:        "\2658  ";    // yeah, the jack looks a little, um, horse-faced
 @icon-joker:    "\263A  ";
-@icon-facedown: "\1F6B2  ";   // the icon on the back of the card
+@icon-facedown: "\2748  ";   // the icon on the back of the card
 
 // text for the face cards and jokers
 @text-k:        "K";
@@ -43,6 +43,9 @@
 
 .card
 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     display: block;
     position: relative;
     float: left;
@@ -73,8 +76,11 @@
     span
     {
         display: block;
-        float: right;
-        margin-top: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 1.2em;
+        right: .4em;
         text-align: center;
 
         // icons in the left and right columns
@@ -82,20 +88,23 @@
         {
             display: block;
             font-size: 1.6em;
+            margin: .2em auto;
         }
 
         // icons in the center column
         &:after
         {
+            position: absolute;
+            top: 0;
+            left: .5em;
             display: block;
             width: 1em;
-            padding: 0 0 0 .5em;
             font-size: 1.6em;
         }
     }
 
     // face down cards
-    &.facedown
+    &.card-facedown
     {
         background-color: @color-facedown-background;
 
@@ -109,13 +118,16 @@
         span:after
         {
             display: block;
-            width: 3.6em;
-            height: 3.5em;
-            margin: .55em;
-            padding: 2em 0 0 0;
+            top: .5em;
+            bottom: .5em;
+            left: .5em;
+            right: .5em;
+            width: auto;
             background-color: darken(@color-facedown-background, 10%);
             border-radius: @card-corner-round-radius;
             font-size: 1em;
+            line-height: 5em;
+            text-align: center; // fix for older IE
             color: @color-facedown-icon;
             content: @icon-facedown;
             border: .15em dashed saturate(@color-facedown-icon, 20%);
@@ -168,19 +180,107 @@
 .card-clubs:after    {content: "@{icon-club}"}
 .card-spades:after   {content: "@{icon-spade}"}
 
-/* center - layout and font sizes */
-.card-k span:before, .card-q span:before, .card-j span:before   {margin: .2em 0 0 0;                                         font-size: 3em;} 
-.card-10 span:before, .card-9 span:before, .card-8 span:before  {margin: -.7em .3em 0 0;  width: 2em;   line-height: 1.1em;}
-.card-10 span:after                                             {margin: -4.4em .3em 0 0;               line-height: 2.2em;}
-.card-9 span:after                                              {margin: -2.8em .3em 0 0;}
-.card-7 span:after                                              {margin: -3.2em .3em 0 0;}
-.card-7 span:before, .card-6 span:before                        {margin: -.6em .3em 0 0;  width: 2em;   line-height: 1.3em;}
-.card-5 span:after                                              {margin: -3.2em .2em 0 0;                                                    padding-left: .4em}
-.card-5 span:before, .card-4 span:before                        {margin: -1.2em .3em 0 0; width: 1.7em; line-height: 2.6em}
-.card-3 span:before                                             {margin: -.6em .7em 0 0;  width: 1em;   line-height: 1.3em;}
-.card-2 span:before                                             {margin: -1.2em .7em 0 0; width: 1em;   line-height: 2.6em;}
-.card-a span:before                                             {margin: -.1em .2em 0 0;                                     font-size: 4em;}
-.card-diamonds  {word-spacing: .4em} // diamond icons are narrower than the other suits' icons, making the icon columns too close together without this
+/* center - font sizes and layout */
+.card-k,
+.card-q,
+.card-j
+{
+    span:before
+    {
+        font-size: 3em;
+        line-height: 2em;
+    }
+}
+.card-a
+{
+    span:before
+    {
+        font-size: 4em;
+        line-height: 1.5em;
+    }
+}
+.card-joker, 
+.card-joker-alt
+{
+    span:before
+    {
+        font-size: 4.6em;
+    }
+}
+.card-10,
+.card-9,
+.card-8
+{
+    span:before
+    {
+        margin-top: .1em;
+        line-height: 1em;
+    }
+}
+
+.card-5,
+.card-4,
+.card-2
+{
+    span:before
+    {
+        margin-top: -.5em;
+        line-height: 2.6em;
+    }
+}
+
+.card-3,
+.card-2
+{
+    span:before
+    {
+        width: 60%;
+    }
+}
+
+.card-a
+{
+    span:before
+    {
+        margin-top: 0;
+    }
+}
+.card-joker,
+.card-joker-alt,
+.card-facedown
+{
+    span
+    {
+        left: 0;
+        right: 0;
+    }
+}
+// center columns of icons
+.card-10
+{
+    span:after
+    {
+        line-height: 2.05em;
+    }
+}
+.card-9,
+.card-5
+{
+    span:after
+    {
+        line-height: 4em;
+    }
+}
+.card-7
+{
+    span:after
+    {
+        line-height: 2.7em;
+    }
+}
+
+// diamond icons are narrower than the other suits' icons, making the icon columns too close together without this
+.card-diamonds  {word-spacing: .4em} 
 
 /* center - suit icons */
 .card-k span:before {content: "@{icon-k}"}
@@ -271,7 +371,6 @@
     {
         display: block;
         margin: -.1em .4m 0 0;
-        font-size: 4.6em;
         color: @color-spades;
         content: @icon-joker;
     }
