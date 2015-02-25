@@ -10,4 +10,4 @@ Additionally, adding class "facedown" to a card hides its face and shows the bac
 
 All the dimensions and font sizes are built using em as the unit, so you can easily adjust the size of the deck by adjusting the base font size of the card (or the .card class.)
 
-For accessibility, each card can contain an optional <p> tag, into which you can put text descriptions of the card as appropriate (e.g. "9H" or "Nine of Hearts"). This text will not be visible in standard browsers but will be read by screen readers.
+For accessibility, each card can contain an optional &lt;p&gt; tag, into which you can put text descriptions of the card as appropriate (e.g. "9H" or "Nine of Hearts"). This text will not be visible in standard browsers, but will be read by screen readers.
