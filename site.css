@@ -1,0 +1,67 @@
+body {
+    background-color: #333;
+    margin:0 auto;
+    font-family: sans-serif;
+}
+.main {
+    background: #ddc;
+    max-width: 780px;
+    margin: 1em auto 0 auto;
+    padding: 1em 2em;
+    color: #333;
+}
+h1, h2
+{
+    font-family: Garamond, 'Times New Roman', 'Times New Roman', serif;
+}
+h1
+{
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 3em;
+    color: #553;
+}
+h2
+{
+    padding: .5em 0 0 0;
+    margin: 0;   
+    color: #333;
+}
+h2.byline
+{
+    margin: 0;
+    padding: 0 0 .5em 0;
+    color: #888;
+}
+.cards
+{
+    text-align: center; 
+}
+.cards .card
+{
+    display: inline-block;
+}
+.buttons
+{
+    text-align: center;
+}
+.button
+{
+    display: inline-block;
+    padding: .5em;
+    background: #bb9;
+    font-weight: bold;
+    font-family: Garamond, 'Times New Roman', 'Times New Roman', serif;
+    font-size: 1.3em;
+    color: #333;
+    text-decoration: none;
+    border-radius: .5em;
+    margin: 0 .5em;
+}
+.button:hover
+{
+    background-color: #cc9;
+}
+.clear {clear:both}
