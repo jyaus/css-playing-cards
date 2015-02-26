@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>CSS Playing Cards, by Jeff Yaus</title>
+    <link rel="stylesheet" type="text/css" href="site.css" />
+    <link rel="stylesheet" type="text/css" href="cards.css" />
+</head>
+
+<body>
+    
+<div >="main">
+    <h1>CSS Playing Cards</h1>
+    <h2 class="byline">by Jeff Yaus</h2>
+
+    <div class="cards">
+        <div class="card card-spades card-k"><span></span></div>
+        <div class="card card-clubs card-q"><span></span></div>
+        <div class="card card-diamonds card-j"><span></span></div>
+        <div class="card card-hearts card-10"><span></span></div>
+        <div class="card card-spades card-9"><span></span></div>
+        <div class="card card-clubs card-8"><span></span></div>
+        <div class="card card-diamonds card-7"><span></span></div>
+        <div class="card card-hearts card-6"><span></span></div>
+        <div class="clear"></div>
+    </div>
+ 
+    <p>
+        This file (a LESS file, also available in the post-processed version as a CSS file) creates styling for a playing card deck, using only CSS and Unicode characters &mdash; no images!
+    </p>
+
+    <div class="buttons">
+        <a href="https://github.com/jyaus/css-playing-cards/archive/master.zip" class="button">Download it!</a>
+        <a href="https://github.com/jyaus/css-playing-cards/" class="button">View on GitHub</a>
+    </div>
+
+    <h2>Usage</h2>
+    <p>
+        All cards should be div elements, each with an empty span inside it. Each card gets a CSS class of "card", plus a class for the name of the suit (e.g. "card-hearts") and a class for the value (e.g. "card-9" for a nine). For instance, the king of spades would look like:
+        &lt;div class="card card-spades card-k"&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+    </p>
+    <p>
+        A class of "card-joker" creates a joker; for games that need to differentiate between the two jokers, you can use "card-joke" and "card-joker-alt"
+    </p>
+
+    <p>
+        Additionally, adding class "card-facedown" to a card hides its face and shows the back of the card instead.
+    </p>
+
+    <h2>Customizing</h2>
+    <p>
+        All the dimensions and font sizes are built using ems as the unit, so you can easily adjust the size of the deck by adjusting the base font size of the .card class.
+    </p>
+
+    <p>
+        The colors and icons used for the suits, and the names of the face cards, are stored as LESS variables. These can be easily adjusted to customize the deck from its French-style default. For instance, changing one variable will turn hearts into the roses used instead in a Swiss German deck; another variable will turn those roses from red to Swiss German yellow.
+    </p>
+
+    <h2>Accessibility</h2>
+    <p>
+        For accessibility, each card can contain an optional &lt;p&gt; tag, into which you can put text descriptions of the card as appropriate (e.g. "9H" or "Nine of Hearts"). This text will not be visible in standard browsers, but will be read by screen readers.
+    </p>
+
+    <div class="cards">
+        <div class="card card-spades card-5"><span></span></div>
+        <div class="card card-clubs card-4"><span></span></div>
+        <div class="card card-diamonds card-3"><span></span></div>
+        <div class="card card-hearts card-2"><span></span></div>
+        <div class="card card-spades card-a"><span></span></div>
+        <div class="card card-joker"><span></span></div>
+        <div class="card card-joker-alt"><span></span></div>
+        <div class="card card-hearts card-a card-facedown"><span></span></div>
+        <div class="clear"></div>
+    </div>
+
+</body>
+</html>
