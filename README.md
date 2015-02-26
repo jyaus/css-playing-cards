@@ -21,3 +21,7 @@ The colors and icons used for the suits, and the names of the face cards, are st
 Accessibility
 -------------
 For accessibility, each card can contain an optional &lt;p&gt; tag, into which you can put text descriptions of the card as appropriate (e.g. "9H" or "Nine of Hearts"). This text will not be visible in standard browsers, but will be read by screen readers.
+
+Usage without LESS
+------------------
+A post-processed version of the .less file is included as a .css file. 
