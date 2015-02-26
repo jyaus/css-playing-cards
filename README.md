@@ -8,9 +8,9 @@ Usage
 All cards should be div elements, each with an empty span inside it. Each card gets a CSS class of "card", plus a class for the name of the suit (e.g. "card-hearts") and a class for the value (e.g. "card-9" for a nine). For instance, the king of spades would look like:
   &lt;div class="card card-spades card-k"&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
 
-A value of "card-joker" creates a joker; for games that need to differentiate between the two jokers, you can use "card-joke" and "card-joker-alt".
+A class of "card-joker" creates a joker; for games that need to differentiate between the two jokers, you can use "card-joke" and "card-joker-alt".
 
-Additionally, adding class "facedown" to a card hides its face and shows the back of the card instead.
+Additionally, adding class "card-facedown" to a card hides its face and shows the back of the card instead.
 
 Customizing
 -----------
