@@ -61,7 +61,7 @@
 .card.card-facedown:before,
 .card.card-facedown:after,
 .card.card-facedown > span:before {
-  display: none;
+  opacity: 0;
 }
 .card.card-facedown span:after {
   display: block;
@@ -370,7 +370,7 @@
 }
 .card-joker:after,
 .card-joker-alt:after {
-  content: "";
+  opacity: 0;
 }
 .card-joker > span:before,
 .card-joker-alt > span:before {
