@@ -63,7 +63,7 @@
 .card.card-facedown > span:before {
   opacity: 0;
 }
-.card.card-facedown span:after {
+.card.card-facedown.card-facedown span:after {
   display: block;
   top: .5em;
   bottom: .5em;
