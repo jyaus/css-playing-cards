@@ -4,7 +4,7 @@ CSS Playing Cards
 
 Playing cards using only CSS and Unicode characters
 
-http://jyaus.github.io/css-playing-cards/
+[http://jyaus.github.io/css-playing-cards/](http://jyaus.github.io/css-playing-cards/)
 
 Usage
 -----     
