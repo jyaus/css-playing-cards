@@ -1,6 +1,6 @@
 body {
     background-color: #333;
-    margin:0 auto;
+    margin: 0 auto;
     font-family: sans-serif;
 }
 .main {
@@ -10,12 +10,10 @@ body {
     padding: 1em 2em;
     color: #333;
 }
-h1, h2
-{
+h1, h2 {
     font-family: Garamond, 'Times New Roman', 'Times New Roman', serif;
 }
-h1
-{
+h1 {
     margin: 0;
     padding: 0;
     font-style: italic;
@@ -23,32 +21,33 @@ h1
     font-size: 3em;
     color: #553;
 }
-h2
-{
+h2 {
     padding: .5em 0 0 0;
     margin: 0;   
     color: #333;
 }
-h2.byline
-{
+h2.byline {
     margin: 0;
     padding: 0 0 .5em 0;
-    color: #888;
+    color: #555;
 }
-.cards
-{
-    text-align: center; 
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    margin: 1.7em 0;
 }
-.cards .card
-{
-    display: inline-block;
+.deck .cards {
+    gap: 1.7em;
 }
-.buttons
-{
-    text-align: center;
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
 }
-.button
-{
+.links a {
     display: inline-block;
     padding: .5em;
     background: #bb9;
@@ -58,10 +57,7 @@ h2.byline
     color: #333;
     text-decoration: none;
     border-radius: .5em;
-    margin: 0 .5em;
 }
-.button:hover
-{
+.links a:hover {
     background-color: #cc9;
 }
-.clear {clear:both}
